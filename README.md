@@ -1,2 +1,34 @@
-# flask-mini-app
-This project contains a minimal example of a Flask app obtained from https://medium.com/@andreajrubino/run-the-simplest-web-app-in-docker-23df528e8b8 for the purpose of learing Docker.
+# Minimal Flask App Example
+
+This repository provides a minimal working example of a **Flask web application** containerized with Docker. It is based on the tutorial: [Run the simplest web app in Docker](https://medium.com/@andreajrubino/run-the-simplest-web-app-in-docker-23df528e8b8).
+
+## Description
+This lightweight application demonstrates how Flask maps URLs to Python functions. Depending on the endpoint accessed, the container will serve different text responses.
+
+## How to Run
+To pull and run the image from DockerHub, use the following command in your terminal:
+
+First, pull the image from Docker Hub:
+```bash
+docker pull tmihajlov/flask-mini-app:latest
+```
+Then, run the container:
+```bash
+docker run -p 8080:5000 dockersamples/tiny-flask-app:latest
+```
+
+### Accessing the App
+Once the container is running, open your web browser and navigate to the following addresses:
+
+* **Home Page:** `http://localhost:8080`
+    * *Expected output:* "You're home now!"
+* **Hello World Page:** `http://localhost:8080/hello-world`
+    * *Expected output:* "Hello World!"
+
+
+### Key Details
+* **Host Port:** 8080
+* **Container Port:** 5000
+* **Base Image:** Python
+
+> **Note:** If port `8080` is already in use on your host machine, you can change the mapping by modifying the first number in the run command (e.g., `-p 9000:5000`).
