@@ -12,6 +12,10 @@ First, pull the image from Docker Hub:
 ```bash
 docker pull tmihajlov/flask-mini-app:latest
 ```
+Before running the application, you need to build the Docker image from the source code:
+```bash
+docker build -t tmihajlov/flask-mini-app .
+```
 Then, run the container:
 ```bash
 docker run -p 8080:5000 dockersamples/tiny-flask-app:latest
