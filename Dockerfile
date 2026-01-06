@@ -1,9 +1,12 @@
-FROM python:3.10.0-slim-buster
+FROM python:3.10-slim
 
-WORKDIR /flask-simple-app
+WORKDIR /app
 
-COPY . .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip3 install -r requirements.txt
+COPY app.py .
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+EXPOSE 8080
+
+CMD ["python", "app.py"]
