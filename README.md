@@ -32,7 +32,7 @@ Once the container is running, open your web browser and navigate to the followi
 
 ### Key Details
 * **Host Port:** 8080
-* **Container Port:** 5000
+* **Container Port:** 8080
 * **Base Image:** Python
 
 > **Note:** If port `8080` is already in use on your host machine, you can change the mapping by modifying the first number in the run command (e.g., `-p 9000:5000`).
