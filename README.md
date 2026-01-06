@@ -18,7 +18,7 @@ docker build -t tmihajlov/flask-mini-app .
 ```
 Then, run the container:
 ```bash
-docker run -p 8080:5000 dockersamples/tiny-flask-app:latest
+docker run -p 8080:8080 dockersamples/tiny-flask-app:latest
 ```
 
 ### Accessing the App
